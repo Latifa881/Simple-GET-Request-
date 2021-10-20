@@ -9,13 +9,13 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class SimpleGETRequestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_simple_get_request)
         val tvName=findViewById<TextView>(R.id.tvName)
         val apiInterface = APIClient().getClient()?.create(APIInterface::class.java)
-        val progressDialog = ProgressDialog(this@MainActivity)
+        val progressDialog = ProgressDialog(this@SimpleGETRequestActivity)
         progressDialog.setMessage("Please wait")
         progressDialog.show()
         var text=""

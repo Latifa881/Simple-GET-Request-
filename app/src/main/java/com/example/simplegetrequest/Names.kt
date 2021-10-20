@@ -8,6 +8,8 @@ class Names {
     class Name {
         @SerializedName("name")
         var name: String? = null
-
+        constructor( name: String?) {
+            this.name = name
+        }
     }
 }
